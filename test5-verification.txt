@@ -1,0 +1,19 @@
+クオペイくん v0.1.0-test5
+Source: b9fc9b19fa5899982aeea83c6e42629c1c639a24
+CI: https://github.com/45kikurage-rgb/quo-cardpay-auto-save/actions/runs/37174427539
+Unit tests: 81 passed, 0 failed, 0 ignored.
+Signed release build / pinned signature / app identity / permissions verification: PASS.
+applicationId: com.aruno.quocardpayautosave
+versionCode: 5
+APK size: 269452 bytes
+APK SHA-256: e87d9581b9be0831656f98fd1c35386e9db0293fb9ae7504d8d88bb588ec46d3
+Certificate SHA-256: 7d463c50535535ea416477ac9bd1da5f7bd96dc818cd9eee48c5e065f6a9f299
+
+毎秒の定期確認と画面イベントで、各ページの必須要素と表示中・有効・クリック可能な対象を照合。
+「進む」画面と共有される説明文だけでWAIT_CONTINUEに固定される誤判定を修正。
+複数の画面条件が成立した場合はAMBIGUOUSとして待機。非表示・背景ウィンドウ・単なる文字はクリック対象から除外。
+実画面がカードに戻った場合はQUOアプリ移行前に限り再判定。操作回数や45秒の期限はリセットしない。
+連打防止、初回操作＋最大2回の補助タップ、保存中・保存済み保護、URL照合、端末内データ、アイコン、専用署名を維持。
+ログの画面判定も実際の操作判定と共通化。45秒停止はSAFETY_TIMEOUTとして記録。
+
+実機確認は未実施。アンインストールせず上書き更新し、自動ログONで少数の未処理URLを確認してください。
