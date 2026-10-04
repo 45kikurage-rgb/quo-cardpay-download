@@ -1,0 +1,47 @@
+QUOカードPay 自動保存 test2 検証記録
+確認日: 2026-10-04 JST
+アプリリポジトリ: https://github.com/45kikurage-rgb/quo-cardpay-auto-save
+移植元候補: 45kikurage-rgb/45kikurage-rgb-arunomatic @ 626267b0c66699e031bac94996fa60165d92d092
+アプリcommit: 2336ac9fa49d344b4f0db0cac5820e716fa267c1
+applicationId: com.aruno.quocardpayautosave
+versionCode: 2
+versionName: v0.1.0-test2
+APK: quo-cardpay-auto-save-v0.1.0-test2.apk
+APK bytes: 33392
+APK SHA-256: 9838051b30dcd494ba1436ea542e5153293de02dd0e71cfc379464594af4127a
+署名証明書 SHA-256: 7d463c50535535ea416477ac9bd1da5f7bd96dc818cd9eee48c5e065f6a9f299
+
+確認結果:
+- git diff --check: PASS。QUO自動操作・テスト・版情報・文書のみ変更。
+- unit test: 55 tests / 0 failures / 0 ignored。
+- Android assembleRelease: SUCCESS。
+- CI: https://github.com/45kikurage-rgb/quo-cardpay-auto-save/actions/runs/37163774082
+- apksigner verify: PASS。APK Signature Scheme v2、RSA 3072。
+- test1 APKとtest2 APKの署名証明書SHA-256完全一致。
+- applicationId一致、versionCode 1→2、データ保存クラス・形式・領域の変更なし。
+- 不要なuses-permissionなし。INTERNET permissionなし。
+- APK内の既知ARUNOMATIC機能名・Cloudflare依存検査: PASS。
+- 元ARUNOMATICリポジトリへの変更なし。
+
+再移植:
+- Chromeのアプリに保存の直後に進むを直接検索。
+- ノードが取れない/押下できない場合の元実測座標fallbackを条件付きで復元。
+- QUO buttonSave ID優先、元の青色保存バー判定を復元。
+- 全window検索、改行分割対応、操作最大3回・1.2秒以上の間隔。
+- Chrome座標fallbackは自動押下から650ms～12秒、縦向き・全画面、最大2回。
+- スクリーンショットは端末内メモリのみ。保存・送信しない。
+- intent復旧最大2回、成功はQUOの完了表示のみ、UNAVAILABLE別分類を維持。
+- PROCESSING中断時はNEED_CHECK、二重開始防止と手動復帰をテスト。
+
+上書き更新手順:
+1. test1の自動保存を停止し、件数を控える。
+2. 配布ページからtest2をダウンロードし「更新」を選ぶ。アンインストールしない。
+3. アプリの版表示・登録件数・結果を確認。ユーザー補助が無効なら再度有効にする。
+4. 縦向き・全画面で10件→30件→100件を実機確認。
+5. 要確認はQUO側の保存状況を確認してから再試行。
+
+残課題:
+実端末での上書き更新・データ保持・自動保存は未実施。
+座標や色による最終fallbackの異機種適合性は実機受入れで確認が必要。
+Android 8～10では画像fallbackを利用できないため要素認識で処理。
+友人への本格配布は実機テスト合格後。
