@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#155bd7">
-<meta name="description" content="クオペイくん Androidアプリの実機テスト版ダウンロード。">
+<meta name="description" content="クオペイくん Androidアプリの運用版ダウンロード。">
 <title>クオペイくん｜ダウンロード</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23155bd7'/%3E%3Cpath d='M16 6v14m-6-6 6 6 6-6M8 24h16' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
 <style>
@@ -16,26 +16,27 @@
 <div class="eyebrow">ANDROID APP</div>
 <h1>クオペイくん</h1>
 <section class="card" aria-label="アプリのダウンロード">
-<span class="tag">実機テスト版</span>
-<p class="version">v0.1.0-test5</p>
-<p class="meta">Android 8.0以降 · APK 269452 bytes<br>掲載日：2026年10月4日</p>
-<a class="download" href="./quo-cardpay-auto-save-v0.1.0-test5.apk" download="quo-cardpay-auto-save-v0.1.0-test5.apk">APKをダウンロード・更新</a>
-<div class="notice"><strong>現在、動作確認中です</strong><p>1秒ごとに各画面の必須要素と押せるボタンを照合し、表示中の画面に合う操作を選ぶよう修正しました。「進む」待ちの誤判定を修正し、判定が重複する場合は操作せず待機します。自動テスト81件は成功しています。更新後は、少数の未処理URLで連続保存を確認してください。</p></div>
+<span class="tag">運用版</span>
+<p class="version">v1.0.0</p>
+<p class="meta">Android 8.0以降 · APK 268200 bytes<br>掲載日：2026年10月4日</p>
+<a class="download" href="./quo-cardpay-auto-save-v1.0.0.apk" download="quo-cardpay-auto-save-v1.0.0.apk">APKをダウンロード・更新</a>
+<div class="notice"><strong>v1.0.0 運用版</strong><p>test5で20件のチャージ成功報告を受け、要確認件数と再試行案内を追加しました。入力欄の案内を変更し、調査ログのボタンを外しています。</p></div>
 <h2>インストール・上書き更新</h2>
 <ol><li>既存アプリの自動保存を停止し、Android端末でAPKをダウンロードします。</li><li>APKを開き、既存アプリがある場合は「更新」を選びます。初めての場合はインストールします。</li><li>Google ChromeとQUOカードPay公式アプリを用意し、QUOカードPayにログインします。</li><li>端末の「設定」→「ユーザー補助」で「クオペイくん」を確認し、必要なら再度有効にします。</li></ol>
 <p class="note">同じ署名の更新版です。登録URL・処理結果を引き継ぐため、アンインストールせず上書きしてください。アンインストールすると、このアプリに保存したURLと処理結果が削除されます。</p>
-<h2>更新後の確認</h2><ol><li>「自動保存中も調査ログを記録」をONにします。</li><li>未処理の少数URLで自動保存を開始し、保存→OK→次のURLまで手動操作なしで進むか確認します。</li><li>停止した場合は停止理由を確認し、「ログを共有」から記録を送ってください。</li></ol><p class="note">補助タップは、画面上で同じ対象ボタンを確認できた場合だけ最大2回行います。保存処理中は完了を待ちます。保存完了を確認済みのURLは、OK待ちで止まっても保存済みを維持します。</p><h2>手動操作を1件記録する（必要な場合）</h2>
-<ol><li>アプリで「調査用：操作ログ」を開きます。</li><li>「手動操作の記録を開始（1件）」を押します。先頭の未処理URLが開きます。</li><li>「アプリに保存」→「進む」→QUOアプリの「保存」まで、自分で操作します。</li><li>このアプリに戻り「記録を停止」→「ログを共有」を押します。</li><li>共有先でChatGPTを選ぶか、ログファイルを保存してこの会話に添付してください。</li></ol>
-<p class="note">手動記録中は自動タップ・次URLへの移動を行いません。最大5分で終了します。記録した1件は「要確認」になるため、QUOアプリに保存できていた場合は再試行しないでください。</p>
-<p class="note">URL・価値コード・数字列・未許可の文言はマスクし、ログは端末内だけに保存します。自動処理の待機理由も調べる場合は「自動保存中も調査ログを記録」をONにしてから開始してください。</p>
+<h2>使い方</h2>
+<ol><li>QUOカードPayのURLを入力欄に貼り付けます。</li><li>［URL登録］→［自動保存開始］の順に進みます。</li><li>アプリに戻ったら、画面上部の「要確認○件」と処理結果を確認します。</li></ol>
+<h2>要確認がある場合</h2>
+<p>チャージ漏れの可能性があります。QUOカードPayアプリ側の保存状況を確認し、［要確認を再試行］で未処理へ戻してから、［自動保存開始］で再開してください。</p>
+<p class="note">毎秒、画面の必須要素と押せるボタンを照合します。判定が重複する場合は待機し、45秒以内に確認できなければ停止します。保存完了を確認済みのURLは、OK待ちで止まっても保存済みを維持します。</p>
 <details><summary>バージョン・ファイル情報</summary><dl>
-<dt>ソース commit</dt><dd>b9fc9b19fa5899982aeea83c6e42629c1c639a24</dd>
-<dt>自動テスト</dt><dd>81件成功 / 失敗0件</dd>
-<dt>versionCode</dt><dd>5</dd>
+<dt>ソース commit</dt><dd>07d88af23fb9f2dfde0d744c01342a31e5b466c6</dd>
+<dt>自動テスト</dt><dd>83件成功 / 失敗0件</dd>
+<dt>versionCode</dt><dd>6</dd>
 <dt>applicationId</dt><dd>com.aruno.quocardpayautosave</dd>
-<dt>APK SHA-256</dt><dd>e87d9581b9be0831656f98fd1c35386e9db0293fb9ae7504d8d88bb588ec46d3</dd>
+<dt>APK SHA-256</dt><dd>f8f2e6f7e54fb64f7221a8035c9a89dd122cd81ea92965ebcc7f86b5e02ec522</dd>
 <dt>署名証明書 SHA-256</dt><dd>7d463c50535535ea416477ac9bd1da5f7bd96dc818cd9eee48c5e065f6a9f299</dd>
-</dl><p><a href="./test5-verification.txt">検証記録と更新手順</a></p></details>
+</dl><p><a href="./release-v1.0.0-verification.txt">検証記録と更新手順</a></p></details>
 </section>
 <footer><p>Android専用です。iPhoneでもこのページは閲覧できますが、アプリはインストールできません。</p><p>URL・処理結果は、利用者それぞれの端末内に保存します。</p><p>本アプリはQUOカードPay公式アプリではありません。</p></footer>
 </main></body></html>

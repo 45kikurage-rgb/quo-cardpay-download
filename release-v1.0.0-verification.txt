@@ -1,0 +1,22 @@
+クオペイくん v1.0.0（運用版）
+Source: 07d88af23fb9f2dfde0d744c01342a31e5b466c6
+CI: https://github.com/45kikurage-rgb/quo-cardpay-auto-save/actions/runs/37175458187
+Unit tests: 83 passed, 0 failed, 0 ignored.
+Signed release build / pinned signature / app identity / permissions verification: PASS.
+applicationId: com.aruno.quocardpayautosave
+versionCode: 6
+APK size: 268200 bytes
+APK SHA-256: f8f2e6f7e54fb64f7221a8035c9a89dd122cd81ea92965ebcc7f86b5e02ec522
+Certificate SHA-256: 7d463c50535535ea416477ac9bd1da5f7bd96dc818cd9eee48c5e065f6a9f299
+
+2026-10-04、利用者からtest5で20件エラーなくチャージできたとの実機報告あり。
+v1.0.0は同じ自動チャージ処理を維持し、運用画面を調整した版。
+・画面上部に「要確認N件」を表示。1件以上ではチャージ漏れの可能性・再試行案内を赤色表示。
+・アプリ復帰時に件数を即時更新。停止中は上部へ戻して案内を表示。
+・入力欄の案内を指定文言に変更。
+・ログ関連の操作UIを除去し、運用画面を開くと自動ログ設定をOFF。既存ログは削除しない。
+・要確認の再試行は既存の保存状況確認ダイアログを維持。
+・URL/処理結果の保存形式、署名、applicationId、アイコン、45秒安全停止を維持。
+
+アンインストールせず上書き更新してください。
+自動チャージの実機受入れはtest5の20件報告に基づく。v1.0.0の追加UIは自動テストで確認済みで、端末での表示確認は更新後に行う。
